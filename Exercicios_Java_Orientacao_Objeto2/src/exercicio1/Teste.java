@@ -15,6 +15,7 @@ public class Teste {
 		Apostas.verificaResultado(aposta1);
 		System.out.println();
 		Apostas.verificaResultado(aposta5);
+		
 	}
 
 }
