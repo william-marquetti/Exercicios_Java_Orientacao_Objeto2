@@ -33,23 +33,41 @@ public class Apostas {
 		
 		Arrays.sort(Apostas.resultado);
 		Arrays.sort(aposta.getAposta());
-	
-		System.out.println(aposta.getAposta()[0]);
 		
-		if (Apostas.resultado == aposta.getAposta()){
-			System.out.println("Aposta Ganhadora");
-		} else {
-			System.out.println("Perdeu");
+		boolean acerto = true;
+	
+		for ( int aux1 = 0; aux1 < aposta.getAposta().length; aux1++ ){
+							
+				if ( aposta.getAposta()[aux1] != Apostas.resultado[aux1]){
+					acerto = false;
+					break;
+				}			
+		}
+	
+		
+		if (acerto == true){
+			System.out.println("Parabéns! Você ganhou!");
 			
 			System.out.println("Resultado: ");
 			for (int i : resultado) {
 				System.out.print(i+" ");
 			}
+			System.out.println();
+			
+		} else {
+			System.out.println("Não foi dessa vez...");
+			
+			System.out.println("Resultado: ");
+			for (int i : resultado) {
+				System.out.print(i+" ");
+			}
+			System.out.println();
 			
 			System.out.println("Aposta: ");
 			for (int i : aposta.getAposta()) {
 				System.out.print(i+" ");
 			}
+			System.out.println();
 			
 		}
 		

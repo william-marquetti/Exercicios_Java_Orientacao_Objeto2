@@ -13,6 +13,8 @@ public class Teste {
 		Apostas.setResultado(new int[] {59, 25, 11, 9, 10, 2});
 		
 		Apostas.verificaResultado(aposta1);
+		System.out.println();
+		Apostas.verificaResultado(aposta5);
 	}
 
 }
